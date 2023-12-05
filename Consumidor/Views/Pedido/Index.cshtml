@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Pedidos";
+}
+
+<style>
+    #dt-records tbody th, #dt-records tbody td {
+        padding: 0.25rem !important;
+        line-height: 1.3em !important;
+        vertical-align: middle !important;
+    }
+
+    #btnnuevo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="br-section-wrapper">
+
+    <button id="btnnuevo" class="btn btn-primary" data-target="#modal-record"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo Pedido</button>
+
+    <table id="dt-records" class="table-wrapper table display responsive nowrap table-hover" style="width:100%" data-page-length='10'>
+        <thead class="thead-colored thead-primary">
+            <tr>
+                <th>ID Pedido</th>
+                <th>ID Usuario</th>
+                <th>ID Producto</th>
+                <th>Cantidad</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="modal-record" class="modal" role="dialog">
+    <div class="modal-dialog" style="width: 400px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Detalles del Pedido</h3>
+            </div>
+            <div class="modal-body">
+                <form id="NewRecord" role="form">
+                    <div>
+                        <div class="form-group">
+                            <label for="txtIdPedido" class="control-label">ID del Pedido</label>
+                            <input type="text" id="txtIdPedido" class="form-control" placeholder="ID del Pedido" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtIdUsuarioPedido" class="control-label">ID del Usuario</label>
+                            <input type="text" id="txtIdUsuarioPedido" class="form-control" placeholder="ID del Usuario" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtIdProductoPedido" class="control-label">ID del Producto</label>
+                            <input type="text" id="txtIdProductoPedido" class="form-control" placeholder="ID del Producto" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCantidadPedido" class="control-label">Cantidad</label>
+                            <input type="number" id="txtCantidadPedido" class="form-control" placeholder="Cantidad" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnguardar" data-dismiss="modal" class="btn btn-primary">Guardar</button>
+                        <button id="btncerrar" data-dismiss="modal" class="btn btn-danger">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Pedido.js"></script>
+3>

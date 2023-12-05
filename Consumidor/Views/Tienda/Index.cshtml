@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Tiendas";
+}
+
+<style>
+    #dt-records tbody th, #dt-records tbody td {
+        padding: 0.25rem !important;
+        line-height: 1.3em !important;
+        vertical-align: middle !important;
+    }
+
+    #btnnuevo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="br-section-wrapper">
+
+    <button id="btnnuevo" class="btn btn-primary" data-target="#modal-record"><i class="fa fa-plus" aria-hidden="true"></i> Nueva Tienda</button>
+
+    <table id="dt-records" class="table-wrapper table display responsive nowrap table-hover" style="width:100%" data-page-length='10'>
+        <thead class="thead-colored thead-primary">
+            <tr>
+                <th>ID Tienda</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="modal-record" class="modal" role="dialog">
+    <div class="modal-dialog" style="width: 400px !important;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Detalles de la Tienda</h3>
+            </div>
+            <div class="modal-body">
+                <form id="NewRecord" role="form">
+                    <div>
+                        <div class="form-group">
+                            <label for="txtIdTienda" class="control-label">ID Tienda</label>
+                            <input type="text" id="txtIdTienda" class="form-control" placeholder="ID de la Tienda" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtNombreTienda" class="control-label">Nombre</label>
+                            <input type="text" id="txtNombreTienda" class="form-control" placeholder="Nombre de la Tienda" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDireccionTienda" class="control-label">Dirección</label>
+                            <input type="text" id="txtDireccionTienda" class="form-control" placeholder="Dirección de la Tienda" />
+                        </div>
+                        <div class="form-group">
+                            <label for="txtCiudadTienda" class="control-label">Ciudad</label>
+                            <input type="text" id="txtCiudadTienda" class="form-control" placeholder="Ciudad de la Tienda" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnguardar" data-dismiss="modal" class="btn btn-primary">Guardar</button>
+                        <button id="btncerrar" data-dismiss="modal" class="btn btn-danger">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/Tienda.js"></script>
